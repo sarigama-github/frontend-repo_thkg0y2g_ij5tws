@@ -1,73 +1,56 @@
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Features from './components/Features';
+
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Subtle pattern overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.05),transparent_50%)]"></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-slate-200">
+      <Navbar />
+      <main>
+        <Hero />
+        <Features />
+        <CTA />
+        <Footer />
+      </main>
+    </div>
+  )
+}
 
-      <div className="relative min-h-screen flex items-center justify-center p-8">
-        <div className="max-w-2xl w-full">
-          {/* Header with Flames icon */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center mb-6">
-              <img
-                src="/flame-icon.svg"
-                alt="Flames"
-                className="w-24 h-24 drop-shadow-[0_0_25px_rgba(59,130,246,0.5)]"
-              />
-            </div>
-
-            <h1 className="text-5xl font-bold text-white mb-4 tracking-tight">
-              Flames Blue
-            </h1>
-
-            <p className="text-xl text-blue-200 mb-6">
-              Build applications through conversation
-            </p>
-          </div>
-
-          {/* Instructions */}
-          <div className="bg-slate-800/50 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-8 shadow-xl mb-6">
-            <div className="flex items-start gap-4 mb-6">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                1
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Describe your idea</h3>
-                <p className="text-blue-200/80 text-sm">Use the chat panel on the left to tell the AI what you want to build</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4 mb-6">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                2
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Watch it build</h3>
-                <p className="text-blue-200/80 text-sm">Your app will appear in this preview as the AI generates the code</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-lg flex items-center justify-center font-bold">
-                3
-              </div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Refine and iterate</h3>
-                <p className="text-blue-200/80 text-sm">Continue the conversation to add features and make changes</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Footer */}
-          <div className="text-center">
-            <p className="text-sm text-blue-300/60">
-              No coding required • Just describe what you want
-            </p>
+function CTA() {
+  return (
+    <section id="demo" className="relative py-20">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(99,102,241,0.15),transparent_45%)]" />
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-slate-800/70 to-slate-900/70 p-8 sm:p-12 text-center backdrop-blur">
+          <h3 className="text-2xl sm:text-3xl font-bold text-white">Ready to modernize your school?</h3>
+          <p className="mt-3 text-slate-300">Book a live demo and see how EduSync simplifies academics, attendance, communication, and finance in one place.</p>
+          <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+            <a href="#" className="inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-blue-500 to-indigo-500 px-5 py-3 text-white font-medium shadow-lg shadow-blue-500/30 hover:from-blue-600 hover:to-indigo-600 transition">Book a Demo</a>
+            <a href="#features" className="inline-flex items-center justify-center rounded-lg border border-white/15 px-5 py-3 text-white/90 hover:bg-white/5 transition">Explore Platform</a>
           </div>
         </div>
       </div>
-    </div>
-  )
+    </section>
+  );
+}
+
+function Footer() {
+  return (
+    <footer className="border-t border-white/10 py-10">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="flex items-center gap-3">
+          <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-500 grid place-items-center text-white font-semibold">E</div>
+          <span className="text-white font-medium">EduSync</span>
+        </div>
+        <p className="text-slate-400 text-sm">© {new Date().getFullYear()} EduSync. All rights reserved.</p>
+        <div className="flex items-center gap-4 text-sm">
+          <a href="#" className="text-slate-400 hover:text-white">Privacy</a>
+          <a href="#" className="text-slate-400 hover:text-white">Terms</a>
+          <a href="#contact" className="text-slate-400 hover:text-white">Contact</a>
+        </div>
+      </div>
+    </footer>
+  );
 }
 
 export default App
