@@ -1,6 +1,10 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Features from './components/Features';
+import Solutions from './components/Solutions';
+import WhyChoose from './components/WhyChoose';
+import CTA2 from './components/CTA2';
+import SiteFooter from './components/SiteFooter';
 
 function App() {
   return (
@@ -9,8 +13,11 @@ function App() {
       <main>
         <Hero />
         <Features />
+        <Solutions />
+        <WhyChoose />
         <CTA />
-        <Footer />
+        <CTA2 />
+        <SiteFooter />
       </main>
     </div>
   )
@@ -31,25 +38,6 @@ function CTA() {
         </div>
       </div>
     </section>
-  );
-}
-
-function Footer() {
-  return (
-    <footer className="border-t border-white/10 py-10">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div className="flex items-center gap-3">
-          <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-500 grid place-items-center text-white font-semibold">E</div>
-          <span className="text-white font-medium">EduSync</span>
-        </div>
-        <p className="text-slate-400 text-sm">© {new Date().getFullYear()} EduSync. All rights reserved.</p>
-        <div className="flex items-center gap-4 text-sm">
-          <a href="#" className="text-slate-400 hover:text-white">Privacy</a>
-          <a href="#" className="text-slate-400 hover:text-white">Terms</a>
-          <a href="#contact" className="text-slate-400 hover:text-white">Contact</a>
-        </div>
-      </div>
-    </footer>
   );
 }
 
